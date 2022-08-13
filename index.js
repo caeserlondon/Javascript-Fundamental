@@ -34,3 +34,9 @@ function fizzBuzz(num) {
 
 const output = fizzBuzz(100)
 console.log(output)
+
+////////////////////////////////////////////////////////////////
+
+// CHALLENGE 3
+// LONGEST WORDS IN THE STRING
+// if there are more than one word return them in an array.
