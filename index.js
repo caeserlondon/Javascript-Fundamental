@@ -68,17 +68,29 @@
 /////// CHALLENGE 4
 /// ARRAY SUM should be equal to the largest number
 
-function arraySum(arr) {
-	let temArr = arr.sort((a, b) => {
-		return a - b
-	})
-	let largest = temArr.pop()
-	let sum = 0
-	temArr.forEach((item) => (sum += item))
-	return largest === sum
+// function arraySum(arr) {
+// 	let temArr = arr.sort((a, b) => {
+// 		return a - b
+// 	})
+// 	let largest = temArr.pop()
+// 	let sum = 0
+// 	temArr.forEach((item) => (sum += item))
+// 	return largest === sum
+// }
+
+// console.log(arraySum([1, 2, 4, 6, 13]))
+// // should return true 1+2+4+6 = 13
+// console.log(arraySum([1, 2, 4, 34, 22]))
+// // should return false 1+2+4+22 = 29  29! = 34
+
+///////////////////////////////////////////
+
+// // challenge 5 reverse an integer
+function reverseInt(int) {
+	const revString = int.toString().split('').reverse().join('')
+	return parseInt(revString) * Math.sign(int)
 }
 
-console.log(arraySum([1, 2, 4, 6, 13]))
-// should return true 1+2+4+6 = 13
-console.log(arraySum([1, 2, 4, 34, 22]))
-// should return false 1+2+4+22 = 29  29! = 34
+const output = reverseInt(-17893)
+
+//////////////////////////////////////////////////
