@@ -85,40 +85,61 @@
 
 ///////////////////////////////////////////
 
-// // challenge 5 reverse an integer
-function reverseInt(int) {
-	const revString = int.toString().split('').reverse().join('')
-	return parseInt(revString) * Math.sign(int)
-}
+// // // challenge 5 reverse an integer
+// function reverseInt(int) {
+// 	const revString = int.toString().split('').reverse().join('')
+// 	return parseInt(revString) * Math.sign(int)
+// }
 
-const output = reverseInt(-17893)
+// const output = reverseInt(-17893)
 
 //////////////////////////////////////////////////
 
-// CHALLENGE 6 :  LONGEST WORD
-// RETURN THE LONGEST WORD OF A STRING
-// if more than one the put into an Array
+// // CHALLENGE 6 :  LONGEST WORD
+// // RETURN THE LONGEST WORD OF A STRING
+// // if more than one the put into an Array
 
-function longestWord(sen) {
-	// create a filttered array
-	const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g)
+// function longestWord(sen) {
+// 	// create a filttered array
+// 	const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g)
 
-	// sort by length
-	const sorted = wordArr.sort((a, b) => b.length - a.length)
+// 	// sort by length
+// 	const sorted = wordArr.sort((a, b) => b.length - a.length)
 
-	// if multiple word put into array
-	const longestWordArr = sorted.filter(
-		(word) => word.length === sorted[0].length
-	)
+// 	// if multiple word put into array
+// 	const longestWordArr = sorted.filter(
+// 		(word) => word.length === sorted[0].length
+// 	)
 
-	// check if more than one word in the Array
-	if (longestWordArr.length === 1) {
-		// return the word
-		return longestWordArr[0]
-	} else {
-		return longestWordArr
-	}
+// 	// check if more than one word in the Array
+// 	if (longestWordArr.length === 1) {
+// 		// return the word
+// 		return longestWordArr[0]
+// 	} else {
+// 		return longestWordArr
+// 	}
+// }
+// const output = longestWord('Hello there, my name is Caeser')
+
+// console.log(output)
+
+///////////////////////////////////////
+
+// //CHALLENGE 7: ANAGRAM
+// / An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+// / For example, the word anagram itself can be rearranged into nag a ram, also the word binary into brainy and the word adobe into abode.
+// return true or false
+
+function isAnagram(str1, str2) {
+	return formatStr(str1) === formatStr(str2)
 }
-const output = longestWord('Hello there, my name is Caeser')
 
+// creating a helper function
+function formatStr(str) {
+	return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
+}
+
+const output = isAnagram('elbow', 'below#')
 console.log(output)
+
+/////////////////////////////////////////////
