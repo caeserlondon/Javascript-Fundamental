@@ -125,21 +125,45 @@
 
 ///////////////////////////////////////
 
-// //CHALLENGE 7: ANAGRAM
-// / An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-// / For example, the word anagram itself can be rearranged into nag a ram, also the word binary into brainy and the word adobe into abode.
-// return true or false
+// // //CHALLENGE 7: ANAGRAM
+// // / An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+// // / For example, the word anagram itself can be rearranged into nag a ram, also the word binary into brainy and the word adobe into abode.
+// // return true or false
 
-function isAnagram(str1, str2) {
-	return formatStr(str1) === formatStr(str2)
-}
+// function isAnagram(str1, str2) {
+// 	return formatStr(str1) === formatStr(str2)
+// }
 
-// creating a helper function
-function formatStr(str) {
-	return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
-}
+// // creating a helper function
+// function formatStr(str) {
+// 	return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
+// }
 
-const output = isAnagram('elbow', 'below#')
-console.log(output)
+// const output = isAnagram('elbow', 'below#')
+// console.log(output)
 
 /////////////////////////////////////////////
+
+// CHALLENGE 8: LETTER CHANGE
+// CHANGE EVERY LETTER OF THE STRING TO THE ONE THAT FOLLOWS
+//  IT IN THE ALPHABET AND CAPITALIZE THE VOWELS
+//    z should turn to a
+//  ex. 'hello there' === 'Ifmmp UIfsf'
+
+function letterChange(str) {
+	let newStr = str.toLowerCase().replace(/[a-z]/gi, function (char) {
+		if (char === 'z') {
+			return 'a'
+		} else {
+			return String.fromCharCode(char.charCodeAt() + 1)
+		}
+	})
+	newStr = newStr.replace(/a|e|i|o|u/gi, function (vowel) {
+		return vowel.toUpperCase()
+	})
+	return newStr
+}
+
+const output = letterChange('hello there')
+
+console.log(output)
