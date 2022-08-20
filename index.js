@@ -144,26 +144,55 @@
 
 /////////////////////////////////////////////
 
-// CHALLENGE 8: LETTER CHANGE
-// CHANGE EVERY LETTER OF THE STRING TO THE ONE THAT FOLLOWS
-//  IT IN THE ALPHABET AND CAPITALIZE THE VOWELS
-//    z should turn to a
-//  ex. 'hello there' === 'Ifmmp UIfsf'
+// // CHALLENGE 8: LETTER CHANGE
+// // CHANGE EVERY LETTER OF THE STRING TO THE ONE THAT FOLLOWS
+// //  IT IN THE ALPHABET AND CAPITALIZE THE VOWELS
+// //    z should turn to a
+// //  ex. 'hello there' === 'Ifmmp UIfsf'
 
-function letterChange(str) {
-	let newStr = str.toLowerCase().replace(/[a-z]/gi, function (char) {
-		if (char === 'z') {
-			return 'a'
-		} else {
-			return String.fromCharCode(char.charCodeAt() + 1)
-		}
-	})
-	newStr = newStr.replace(/a|e|i|o|u/gi, function (vowel) {
-		return vowel.toUpperCase()
-	})
-	return newStr
+// function letterChange(str) {
+// 	let newStr = str.toLowerCase().replace(/[a-z]/gi, function (char) {
+// 		if (char === 'z') {
+// 			return 'a'
+// 		} else {
+// 			return String.fromCharCode(char.charCodeAt() + 1)
+// 		}
+// 	})
+// 	newStr = newStr.replace(/a|e|i|o|u/gi, function (vowel) {
+// 		return vowel.toUpperCase()
+// 	})
+// 	return newStr
+// }
+
+// const output = letterChange('hello there')
+
+// console.log(output)
+//////////////////////////
+// const message = '@User_One @UserABC! Have you seen this from @Userxyz?'
+// const position = 1
+
+getRecipient = function (message, position) {
+	// Your code goes here
+	usersArray = message
+		.split(' ')
+		.filter((word) => word.includes('@'))
+		.filter((word) => !word.includes('.'))
+
+	// Regular expression to check if string is email
+	const regexExp =
+		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi
+
+	usersArray.filter((users) => !regexExp.test(users))
+
+	usersArray.map((user) =>
+		user.replace(/[~`!#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-]/g, '')
+	)
+
+	return usersArray
 }
 
-const output = letterChange('hello there')
-
-console.log(output)
+aa = getRecipient(
+	'@User_One herh@erte.com @UserABC! Have you seen this from @Userxyz?',
+	1
+)
+console.log(aa)
