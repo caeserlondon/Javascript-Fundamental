@@ -168,31 +168,50 @@
 
 // console.log(output)
 //////////////////////////
-// const message = '@User_One @UserABC! Have you seen this from @Userxyz?'
-// const position = 1
+// // const message = '@User_One @UserABC! Have you seen this from @Userxyz?'
+// // const position = 1
 
-getRecipient = function (message, position) {
-	// Your code goes here
-	usersArray = message
-		.split(' ')
-		.filter((word) => word.includes('@'))
-		.filter((word) => !word.includes('.'))
+// getRecipient = function (message, position) {
+// 	// Your code goes here
+// 	usersArray = message
+// 		.split(' ')
+// 		.filter((word) => word.includes('@'))
+// 		.filter((word) => !word.includes('.'))
 
-	// Regular expression to check if string is email
-	const regexExp =
-		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi
+// 	// Regular expression to check if string is email
+// 	const regexExp =
+// 		/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi
 
-	usersArray.filter((users) => !regexExp.test(users))
+// 	usersArray.filter((users) => !regexExp.test(users))
 
-	usersArray.map((user) =>
-		user.replace(/[~`!#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-]/g, '')
-	)
+// 	usersArray.map((user) =>
+// 		user.replace(/[~`!#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-]/g, '')
+// 	)
 
-	return usersArray
-}
+// 	return usersArray
+// }
 
-aa = getRecipient(
-	'@User_One herh@erte.com @UserABC! Have you seen this from @Userxyz?',
-	1
-)
-console.log(aa)
+// aa = getRecipient(
+// 	'@User_One herh@erte.com @UserABC! Have you seen this from @Userxyz?',
+// 	1
+// )
+// console.log(aa)
+
+///////////////////////////////////////////
+
+/// CHALLENGE 9  : ADD ALL NUMBERS
+/// RETURN A SUM OF ALL PARAMETERS ENTERED REGARDLES OF THE AMOUNT OF NUMBERS
+/// NO ARRAYS .... EXAMPLE  addAll(2, 5, 6, 7) === 20
+
+/// solution 1 using ES5 arguments object (an array like object) and for loop
+
+// function addAll() {
+// 	var args = Array.prototype.slice.call(arguments);
+// 	var sum = 0;
+// 	for (let i = 0; i < args.length; i++) {
+// 		sum += args[i];
+// 	}
+// 	return sum;
+// }
+
+// console.log(addAll(2, 5, 5, 6, 7));
