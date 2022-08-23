@@ -44,3 +44,18 @@
 // }
 
 ////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
+// challenge 2   validate a palindrome and return true or false.
+
+function isPalindrome(str) {
+	const revString = str.split('').reverse().join('')
+	return revString === str
+}
+
+//  call function
+const output = isPalindrome('madam')
+
+console.log(output)
+
+////////////////////////////////////////////////
