@@ -48,14 +48,25 @@
 
 // challenge 2   validate a palindrome and return true or false.
 
-function isPalindrome(str) {
-	const revString = str.split('').reverse().join('')
-	return revString === str
-}
+// function isPalindrome(str) {
+// 	const revString = str.split('').reverse().join('')
+// 	return revString === str
+// }
 
-//  call function
-const output = isPalindrome('madam')
+// //  call function
+// const output = isPalindrome('madam')
 
-console.log(output)
+// console.log(output)
 
 ////////////////////////////////////////////////
+
+// //
+// // challenge 3 reverse an integer
+// function reverseInt(int) {
+// 	const revString = int.toString().split("").reverse().join("");
+// 	return parseInt(revString) * Math.sign(int);
+// }
+
+// const output = reverseInt(-17893);
+
+//////////////////////////////////////////////////
