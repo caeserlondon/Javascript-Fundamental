@@ -223,3 +223,23 @@
 // console.log(output);
 
 ////////////////////////////////////////
+////////////////////////////////////////
+
+// CHALLANGE 9: FLATTEN ARRAY
+// FLATTEN AN ARRAY OF ARRAYS TO A SINGLE ARRAY
+
+// function flattenArray(arrays) {
+// 	///// SOLUTION 1
+// 	return arrays.reduce(function (a, b) {
+// 		// a is the starting point(first array)  and  b is the iteration
+// 		return a.concat(b);
+// 	});
+// }
+
+// const output = flattenArray([
+// 	[1, 2],
+// 	[3, 4],
+// ]);
+// console.log(output);
+////  arrow function   return arrays.reduce((a, b) => a.concat(b));
+///////////////////
