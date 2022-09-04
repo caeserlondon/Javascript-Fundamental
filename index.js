@@ -243,3 +243,16 @@
 // console.log(output);
 ////  arrow function   return arrays.reduce((a, b) => a.concat(b));
 ///////////////////
+////// SOLUTION 2
+
+// function flattenArray(arrays) {
+// 	return [].concat.apply([], arrays);
+// }
+
+// const output = flattenArray([
+// 	[1, 2],
+// 	[3, 4],
+// ]);
+// console.log(output);
+
+////////////
