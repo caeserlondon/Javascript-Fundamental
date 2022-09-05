@@ -255,4 +255,17 @@
 // ]);
 // console.log(output);
 
+////// SOLUTION 3
+
+// function flattenArray(arrays) {
+// 	return [].concat(...arrays);
+// }
+// const output = flattenArray([
+// 	[1, 2],
+// 	[3, 4],
+// ]);
+
+// console.log(output);
+
+////////////////////////////////////////
 ////////////
