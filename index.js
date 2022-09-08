@@ -288,3 +288,29 @@
 // console.log(output);
 
 ///////////////////////////////////////////////
+
+// CHALLENGE 11: LETTER CHANGE
+// CHANGE EVERY LETTER OF THE STRING TO THE ONE THAT FOLLOWS
+//  IT IN THE ALPHABET AND CAPITALIZE THE VOWELS
+//    z should turn to a
+//  ex. 'hello there' === 'Ifmmp UIfsf'
+
+// function letterChange(str) {
+// 	let newStr = str.toLowerCase().replace(/[a-z]/gi, function (char) {
+// 		if (char === "z") {
+// 			return "a";
+// 		} else {
+// 			return String.fromCharCode(char.charCodeAt() + 1);
+// 		}
+// 	});
+// 	newStr = newStr.replace(/a|e|i|o|u/gi, function (vowel) {
+// 		return vowel.toUpperCase();
+// 	});
+// 	return newStr;
+// }
+
+// const output = letterChange("hello there");
+
+// console.log(output);
+
+/////////////////////////////////////////////////
