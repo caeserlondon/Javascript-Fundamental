@@ -319,25 +319,42 @@
 ///// LONGEST WORDS IN THE STRING
 //// if there are more than one word return them in an array.
 
-function longestWords(str) {
-	let words = str.split(' ');
-	let size = 0;
-	let max = [''];
+// function longestWords(str) {
+// 	let words = str.split(' ');
+// 	let size = 0;
+// 	let max = [''];
 
-	for (let i = 0; i < words.length; i++) {
-		if (words[i].length >= size) {
-			size = words[i].length;
-			if (max[max.length - 1].length < words[i].length) {
-				max = [];
-				max.push(words[i]);
-			} else {
-				max = [...max, words[i]];
-			}
-		}
-	}
+// 	for (let i = 0; i < words.length; i++) {
+// 		if (words[i].length >= size) {
+// 			size = words[i].length;
+// 			if (max[max.length - 1].length < words[i].length) {
+// 				max = [];
+// 				max.push(words[i]);
+// 			} else {
+// 				max = [...max, words[i]];
+// 			}
+// 		}
+// 	}
 
-	return [...max];
-}
+// 	return [...max];
+// }
 
-console.log(longestWords('I woke up early today'));
-console.log(longestWords('I love javascript'));
+// console.log(longestWords('I woke up early today'));
+// console.log(longestWords('I love javascript'));
+
+/// CHALLENGE 13  : ADD ALL NUMBERS
+/// RETURN A SUM OF ALL PARAMETERS ENTERED REGARDLES OF THE AMOUNT OF NUMBERS
+/// NO ARRAYS .... EXAMPLE  addAll(2, 5, 6, 7) === 20
+
+/// solution 1 using ES5 arguments object (an array like object) and for loop
+
+// function addAll() {
+// 	var args = Array.prototype.slice.call(arguments);
+// 	var sum = 0;
+// 	for (let i = 0; i < args.length; i++) {
+// 		sum += args[i];
+// 	}
+// 	return sum;
+// }
+
+// console.log(addAll(2, 5, 5, 6, 7));
