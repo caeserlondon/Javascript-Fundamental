@@ -378,3 +378,31 @@
 // console.log(addAll(2, 5, 5, 6, 7));
 
 //////////////////////////////////////////////
+/// CHALLENGE 14 SUM ALL PRIMES
+// pass in a number to loop up to and add all the prime numbers.
+// A prime number is a whole number greater than 1 whoes only factors are 1 and itself.
+/// EX   sumAllPrime(10) == 17
+
+// function sumAllPrime(num) {
+// 	let sum = 0;
+
+// 	function checkForPrime(i) {
+// 		for (let x = 2; x < i; x++) {
+// 			if (i % x === 0) {
+// 				return false;
+// 			}
+// 		}
+// 		return true;
+// 	}
+
+// 	for (let i = 2; i <= num; i++) {
+// 		if (checkForPrime(i)) {
+// 			sum += i;
+// 		}
+// 	}
+// 	return sum;
+// }
+
+// console.log(sumAllPrime(10));
+
+///////////////////////////////////////
