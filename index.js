@@ -406,3 +406,23 @@
 // console.log(sumAllPrime(10));
 
 ///////////////////////////////////////
+////////////////////////////////////
+/// CHALLENGE 15 : SEEK AND DESTROY
+
+//// remove from the array whatever is in the following arguments.
+/// and return left over values in an array.
+/// ex  seekAnddestroy([2, 3, 4, 6, 6, 'hello'],2,6)  == [3, 4, 'hello']
+
+/// solution 1  ; using   arguments, indexOf, filter
+
+// function seekAnddestroy(arr) {
+// 	const args = Array.from(arguments);
+
+// 	function filterArr(arr) {
+// 		// return true if NOT in array
+// 		return args.indexOf(arr) === -1;
+// 	}
+// 	return arr.filter(filterArr);
+// }
+
+// console.log(seekAnddestroy([2, 3, 4, 6, 6, "hello"], 2, 6));
