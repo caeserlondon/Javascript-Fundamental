@@ -426,3 +426,14 @@
 // }
 
 // console.log(seekAnddestroy([2, 3, 4, 6, 6, "hello"], 2, 6));
+
+////////////////////////////////////////
+//// solution 2  using  ...rest, filter and include.
+
+// function seekAnddestroy(arr, ...rest) {
+// 	return arr.filter((val) => !rest.includes(val));
+// }
+
+// console.log(seekAnddestroy([2, 3, 4, 6, 6, "hello"], 2, 6));
+
+////////////////////////////////////////////////
