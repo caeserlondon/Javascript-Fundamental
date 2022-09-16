@@ -490,3 +490,27 @@
 // console.log(sortByHight(a));
 
 ////////////////////////////////////////////////
+///////////////////////////////////////////
+/// CHALLENGE 16 MISSING LETTERS
+//  find the missing letter in the passed letter range and return it.
+/// if all letters are present, return undefind.
+// ex missingLetters('abce') == 'd'
+/// missingLetters(a to z) == undefind.
+
+// function missingLetters(str) {
+// 	let compare = str.charCodeAt(0);
+// 	let missing;
+
+// 	str.split("").map((char, i) => {
+// 		if (str.charCodeAt(i) === compare) {
+// 			++compare;
+// 		} else {
+// 			missing = String.fromCharCode(compare);
+// 		}
+// 	});
+// 	return missing;
+// }
+
+// console.log(missingLetters("abce"));
+
+/////////////////////////////////////////////////////////
