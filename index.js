@@ -529,3 +529,20 @@
 // console.log(evenOddSums([50, 60, 60, 45, 71]));
 
 ////////////////////////////////////////////////
+///// CHALLENGE 18  FIND THE LONGEST WORD IN A STRING
+/// solution
+
+// function longestWord(str) {
+// 	let words = str.split(" ");
+// 	let longest = "";
+
+// 	for (let word of words) {
+// 		if (word.length > longest.length) {
+// 			longest = word;
+// 		}
+// 	}
+// 	return longest;
+// }
+// console.log(longestWord("my name is caeser"));
+
+///////////////////////////////////////////
