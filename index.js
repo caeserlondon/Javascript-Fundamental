@@ -680,3 +680,15 @@
 // console.log(cpitalizeWords("my name is caeser"));
 
 ////////////////
+
+// /// solution 2
+// function cpitalizeWords(str) {
+// 	let words = str.split(" ").map((word) => {
+// 		return word.charAt(0).toUpperCase() + word.slice(1);
+// 	});
+// 	return words.join(" ");
+// }
+// console.log(cpitalizeWords("i love javaScript"));
+// console.log(cpitalizeWords("my name is caeser"));
+
+/////////////////////////////
