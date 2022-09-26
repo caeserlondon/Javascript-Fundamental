@@ -692,3 +692,28 @@
 // console.log(cpitalizeWords("my name is caeser"));
 
 /////////////////////////////
+/////////////////////////////
+
+///CHALLENGE 24
+//return true onlyif all values are unique otherwise return false
+/// using array , object, string method  lastIndexOf()
+/// no set Data structure
+
+//solution 1 using an array
+// function unique(str) {
+// 	let values = [];
+// 	for (let letter of str) {
+// 		if (values.indexOf(letter) !== -1) {
+// 			return false;
+// 		}
+// 		values.push(letter);
+// 	}
+// 	return true;
+// }
+
+// console.log(unique("abcde"));
+// //true
+// console.log(unique("abacdefb"));
+// //false
+
+/////////////
