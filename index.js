@@ -735,3 +735,19 @@
 // console.log(unique("abacdefb"));
 // //false
 /////////////
+///solution 3 using string method lastIndexOf()
+
+// function unique(str) {
+// 	for (let i = 0; i < str.length; i++) {
+// 		if (str.lastIndexOf(str[i]) !== i) {
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// }
+
+// console.log(unique("abcde"));
+// //true
+// console.log(unique("abacdefb"));
+// //false
+/////////////////////////////////////////////
