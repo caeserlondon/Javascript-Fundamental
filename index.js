@@ -768,3 +768,24 @@
 // // should return true 1+2+4+6 = 13
 // console.log(arraySum([1, 2, 4, 34, 22]));
 // // should return false 1+2+4+22 = 29  29! = 34
+
+///////////////////////////////
+/////// CHALLENGE 26  UNIQUE VALUES
+///  find unique values by using Set() data structure
+/// solutin 1
+// function unique(str) {
+// 	let tempStr = new Set();
+// 	for (let letter of str) {
+// 		if (tempStr.has(letter)) {
+// 			return false;
+// 		}
+// 		tempStr.add(letter);
+// 	}
+// 	return true;
+// }
+
+// console.log(unique("abcde"));
+// //true
+// console.log(unique("abacdefb"));
+// //false
+//////////
