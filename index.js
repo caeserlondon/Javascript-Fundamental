@@ -799,3 +799,32 @@
 // console.log(unique("abacdefb"));
 // //false
 ///////////////////////////////////////////////////////////////
+//// CHALLENGE 27
+/// find unique object property values
+
+// let products = [
+// 	{
+// 		title: "Iphone 8",
+// 		company: "apple",
+// 	},
+// 	{
+// 		title: "Galaxy",
+// 		company: "samsong",
+// 	},
+// 	{
+// 		title: "Iphone 7",
+// 		company: "apple",
+// 	},
+// 	{
+// 		title: "Iphone Xs",
+// 		company: "apple",
+// 	},
+// 	{
+// 		title: "HTC phone",
+// 		company: "htc",
+// 	},
+// 	{
+// 		title: "Galaxy HD",
+// 		company: "samsong",
+// 	},
+// ];
