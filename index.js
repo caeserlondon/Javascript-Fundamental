@@ -828,3 +828,10 @@
 // 		company: "samsong",
 // 	},
 // ];
+// /////// solution 1
+
+// // function getUnique(arr) {
+// // 	let tempArr = arr.map((item) => item.company);
+// // 	return [...new Set(tempArr)];
+// // }
+// // console.log(getUnique(products));
