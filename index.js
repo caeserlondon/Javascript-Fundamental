@@ -835,3 +835,15 @@
 // // 	return [...new Set(tempArr)];
 // // }
 // // console.log(getUnique(products));
+// /// solution 2
+// function getUnique(arr) {
+// 	return [
+// 		...arr.reduce((acc, curr) => {
+// 			acc.add(curr.company);
+// 			return acc;
+// 		}, new Set()),
+// 	];
+// }
+// console.log(getUnique(products));
+
+////////////////////////////////////////////////////
