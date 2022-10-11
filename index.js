@@ -1012,4 +1012,20 @@
 // console.log(countLetters("ffffeerttttooo"));
 // /// should return 4f2e1r4t3o
 
-//////////////////////////////////////////
+// //////////////////////////////////////////
+// ///// chalange 33
+// ///   RegEx palindrome
+// function isPalindrom(str) {
+// 	let tempStr = str
+// 		.match(/[a-z0-9]+/gi)
+// 		.join('')
+// 		.toLowerCase();
+// 	second = tempStr.split('').reverse().join('');
+// 	return tempStr === second;
+// }
+// console.log(isPalindrom('race car'));
+// ///true
+// console.log(isPalindrom('caeser'));
+// /// false
+// console.log(isPalindrom('was it a- car? or, a- cat I saw'));
+// /// true
