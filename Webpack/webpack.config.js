@@ -1,6 +1,7 @@
 // Must be in common JS sentax
 
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -9,7 +10,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].js',
+		filename: '[name][contenthash].js',
 	},
 	module: {
 		rules: [
@@ -19,4 +20,11 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new HtmlWebPackPlugin({
+			title: 'Webpack App',
+			filename: 'index.html',
+			template: 'src/template.html',
+		}),
+	],
 };
