@@ -31,7 +31,7 @@ app.post('/api/login', (req, res) => {
 	};
 
 	// Asynchronous Sign using callback
-	jwt.sign({ user }, 'secretkey', { expiresIn: '1h' }, (err, token) => {
+	jwt.sign({ user }, 'secretkey', { expiresIn: '30s' }, (err, token) => {
 		res.json({
 			// token: token, ES5
 			token,
