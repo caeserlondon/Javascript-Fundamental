@@ -9,9 +9,16 @@ app.get('/api', (req, res) => {
 	});
 });
 
-app.post('/api/posts', (req, res) => {
-	res.json({
-		message: 'Post created successfully...',
+app.post('/api/posts', verifyToken, (req, res) => {
+	jwt.verify(req.token, 'secretkey', (err, authData) => {
+		if (err) {
+			res.sendStatus(403);
+		} else {
+			res.json({
+				message: 'Post created...',
+				authData,
+			});
+		}
 	});
 });
 
@@ -23,7 +30,7 @@ app.post('/api/login', (req, res) => {
 		email: 'caeser@gmail.com',
 	};
 
-	//Asynchronous Sign using callback
+	// Asynchronous Sign using callback
 	jwt.sign({ user }, 'secretkey', (err, token) => {
 		res.json({
 			// token: token, ES5
@@ -31,5 +38,28 @@ app.post('/api/login', (req, res) => {
 		});
 	});
 });
+
+//* Format of the token
+//* Authrization: Bearer <access_token>
+
+// Verify Toke (middleware function)
+function verifyToken(req, res, next) {
+	// Get auth header value
+	const bearerHeader = req.headers['authorization'];
+	// Check if bearer is undefined
+	if (typeof bearerHeader !== 'undefined') {
+		// Split at the space
+		const bearer = bearerHeader.split(' ');
+		// Get token value from array
+		const bearerToken = bearer[1];
+		// Set the token
+		req.token = bearerToken;
+		// Calling Next middleware
+		next();
+	} else {
+		// Forbidden
+		res.sendStatus(403);
+	}
+}
 
 app.listen(5001, () => console.log('Server started on port 5000'));
