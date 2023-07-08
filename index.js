@@ -966,21 +966,30 @@
 // // true
 ///////// solution 2 : faster for big numbers.
 
-// function isPrime(num) {
-// 	if (num < 2) {
-// 		return false;
-// 	}
-// 	let root = Math.ceil(Math.sqrt(num));
+function isPrime(num) {
+	if (num === 2) {
+		return true;
+	}
+	if (num < 2) {
+		return false;
+	}
 
-// 	for (let i = 2; i <= root; i++) {
-// 		if (num % i === 0) {
-// 			return false;
-// 		}
-// 	}
-// 	return true;
-// }
+	let root = Math.ceil(Math.sqrt(num));
 
-// console.log(isPrime(8));
+	for (let i = 2; i <= root; i++) {
+		if (num % i === 0) {
+			return false;
+		}
+	}
+	return true;
+}
+
+console.log(isPrime(0));
+console.log(isPrime(1));
+console.log(isPrime(2));
+console.log(isPrime(73));
+console.log(isPrime(75));
+console.log(isPrime(-1));
 // // false
 // console.log(isPrime(11));
 // // true
@@ -1029,3 +1038,17 @@
 // /// false
 // console.log(isPalindrom('was it a- car? or, a- cat I saw'));
 // /// true
+/////////////////////////////////////
+
+// const quarterOf = (month) => {
+// 	let result = month / 3;
+// 	if (result <= 1) {
+// 		return 1;
+// 	} else if (result <= 2) {
+// 		return 2;
+// 	} else if (result <= 3) {
+// 		return 3;
+// 	} else if (result <= 4) return 4;
+// };
+
+// console.log(quarterOf(5));
