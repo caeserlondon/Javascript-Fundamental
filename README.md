@@ -1,3 +1,4 @@
 # Javascript-Fundamentals
 
-Algorithms
+- Algorithms
+- JWT Authentication
