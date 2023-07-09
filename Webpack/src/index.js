@@ -5,4 +5,7 @@ import './styles/main.scss';
 const laughImg = document.getElementById('laughImg');
 laughImg.src = laughing;
 
-console.log(generatejoke());
+const jokeBtn = document.getElementById('jokeBtn');
+jokeBtn.addEventListener('click', generatejoke);
+
+generatejoke();
