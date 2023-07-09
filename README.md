@@ -1,5 +1,5 @@
-# Javascript-Fundamentals
+# JavaScript-Fundamentals
 
 - Algorithms
 - JWT Authentication
-- Webpack
+- Web-Pack
