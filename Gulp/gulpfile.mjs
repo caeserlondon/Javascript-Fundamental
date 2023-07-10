@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
+import uglify from 'gulp-uglify';
 
 //* TOP LEVEL FUNCTIONS
 /*
@@ -32,5 +33,14 @@ gulp.task('imagemin', function (done) {
 	gulp.src('src/images/*')
 	.pipe(imagemin())
 		.pipe(gulp.dest('dist/images'))
+	done();
+})
+
+// Minify JS
+// prettier-ignore
+gulp.task('minify', function (done) {
+	gulp.src('src/js/*.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('dist/js'))
 	done();
 })
