@@ -1,4 +1,5 @@
-const gulp = require('gulp');
+import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
 
 //* TOP LEVEL FUNCTIONS
 /*
@@ -19,7 +20,17 @@ gulp.task(`default`, function () {
 
 // Copy all HTML files
 // prettier-ignore
-gulp.task('copyHtml', function () {
-	return gulp.src('src/*.html')
-		.pipe(gulp.dest('dist'));
-});
+gulp.task('copyHtml', function (done) {
+		gulp.src('src/*.html')
+			.pipe(gulp.dest('dist'))
+	done();
+	});
+
+// Optimize Images
+// prettier-ignore
+gulp.task('imagemin', function (done) {		
+	gulp.src('src/images/*')
+	.pipe(imagemin())
+		.pipe(gulp.dest('dist/images'))
+	done();
+})
