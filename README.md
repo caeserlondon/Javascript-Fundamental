@@ -4,3 +4,4 @@
 - JWT Authentication
 - Web-Pack
 - Gulp
+- Yarn
